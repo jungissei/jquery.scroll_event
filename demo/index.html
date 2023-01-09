@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link
+      rel="stylesheet"
+      href="/jquery.common/css/style.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="../lib/css/style.css"
+      type="text/css"
+      media="all"
+    />
+
+    <title>jquery.scroll_event</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <section id="template_ttl" class="page_layout layout1">
+          <div class="layout_inner">
+            <div class="layout_container">
+              <div class="layout_width">
+                <h1 class="ttl_page">jquery.scroll_event</h1>
+              </div>
+            </div>
+          </div>
+        </section>
+      </header>
+      <main>
+        <section class="page_layout layout1">
+          <div class="layout_inner">
+            <div class="layout_container">
+              <div class="layout_width">
+                <p>Open the browser console, you can check scroll event</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div id="content_block"></div>
+      </main>
+      <footer></footer>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="/jquery.common/js/template/content_block.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="/jquery.common/js/jquery-latest.min.js"
+    ></script>
+
+    <script type="text/javascript" src="../lib/js/scripts.js"></script>
+    <script type="text/javascript">
+      $(window)
+        .on("scroll_page_top", function () {
+          console.log("scroll_page_top");
+        })
+        .on("scroll_page_middle", function () {
+          console.log("scroll_page_middle");
+        })
+        .on("scroll_page_bottom", function () {
+          console.log("scroll_page_bottom");
+        });
+    </script>
+  </body>
+</html>
